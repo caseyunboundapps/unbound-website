@@ -1,0 +1,91 @@
+@import "tailwindcss";
+
+/* ─── Design Tokens ─── */
+:root {
+  --green: #3b9c6f;
+  --green-light: #e5f2ec;
+  --green-dim: #2d7a56;
+  --blue: #4a8fd4;
+  --blue-light: #e5eef8;
+  --ink: #1a1a1a;
+  --cream: #faf9f6;
+  --warm-gray: #f2f0ec;
+  --text: #2a2a2a;
+  --text-secondary: #7a7a7a;
+  --text-tertiary: #b0b0b0;
+  --border: #e8e5df;
+}
+
+/* ─── Tailwind v4 Theme ─── */
+@theme inline {
+  /* Colors */
+  --color-green: var(--green);
+  --color-green-light: var(--green-light);
+  --color-green-dim: var(--green-dim);
+  --color-blue: var(--blue);
+  --color-blue-light: var(--blue-light);
+  --color-ink: var(--ink);
+  --color-cream: var(--cream);
+  --color-warm-gray: var(--warm-gray);
+  --color-text: var(--text);
+  --color-text-secondary: var(--text-secondary);
+  --color-text-tertiary: var(--text-tertiary);
+  --color-border: var(--border);
+
+  /* Fonts */
+  --font-sans: var(--font-figtree), "Figtree", sans-serif;
+  --font-mono: var(--font-martian-mono), "Martian Mono", monospace;
+
+  /* Border Radius */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+  --radius-2xl: 20px;
+  --radius-pill: 100px;
+
+  /* Shadows */
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.04);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.08);
+  --shadow-xl: 0 16px 40px rgba(0, 0, 0, 0.1);
+}
+
+/* ─── Base Styles ─── */
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  font-family: var(--font-sans);
+  background: var(--cream);
+  color: var(--text);
+  overflow-x: hidden;
+}
+
+/* ─── Grain Overlay ─── */
+body::after {
+  content: '';
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  pointer-events: none;
+  z-index: 9999;
+  opacity: 0.025;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-size: 200px;
+}
+
+/* ─── Scroll Reveal Animation ─── */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.reveal-d1 { transition-delay: 0.1s; }
+.reveal-d2 { transition-delay: 0.2s; }
+.reveal-d3 { transition-delay: 0.3s; }

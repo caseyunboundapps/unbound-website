@@ -1,0 +1,13 @@
+/* TEAM */
+Casey Ring — Product, Engineering, Design
+Nick Jackson — Strategy, Operations
+
+/* SITE */
+Built with Next.js, Tailwind CSS, TypeScript
+Fonts: Martian Mono, Figtree
+Hosted on Vercel
+
+/* COMPANY */
+Unbound Studios, LLC
+unboundapps.com
+hello@unboundapps.com

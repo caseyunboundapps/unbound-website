@@ -30,10 +30,17 @@ This file provides guidance to Claude Code when working with this repository.
    - Provide exact instructions for Casey to update the file
    - Wait for confirmation before proceeding
 
+## Stack
+- **Framework:** Next.js 16 (App Router, TypeScript strict)
+- **Styling:** Tailwind CSS v4 (CSS-first config via `@theme` in globals.css)
+- **Fonts:** Martian Mono (display/mono) + Figtree (body/sans) via `next/font/google`
+- **Deployment:** Vercel (planned)
+
 ## Development Commands
-- `npm run dev` - Start development server
+- `npm run dev` - Start development server (localhost:3000)
 - `npm run build` - Build for production
-- `npm run preview` - Preview production build locally
+- `npm run start` - Serve production build locally
+- `npm run lint` - Run ESLint
 
 ## Quick Testing Checklist
 Before marking work complete, verify:
@@ -60,9 +67,45 @@ Before marking work complete, verify:
 
 ### Environment Variables
 - Keep `.env.local` in `.gitignore`
-- Use `VITE_` prefix for public variables only
+- Use `NEXT_PUBLIC_` prefix for public variables only
 - Never expose API secrets to the client
 - Document all required variables in `.env.example`
+
+## Project Structure
+```
+app/
+  layout.tsx          # Root layout with fonts, metadata, JSON-LD, Plausible
+  page.tsx            # Homepage (Hero, WorkGrid, Statement, Services, Team, CTA)
+  not-found.tsx       # 404 page
+  globals.css         # Tailwind v4 @theme + CSS custom properties + base styles
+  icon.svg            # Favicon
+  robots.ts           # robots.txt generator
+  sitemap.ts          # sitemap.xml generator
+  work/[slug]/page.tsx  # Case study template (Mirror, Apparel)
+  about/page.tsx      # About page
+  privacy/page.tsx    # Privacy policy
+  terms/page.tsx      # Terms of service
+components/
+  Header.tsx          # Fixed header with wordmark + nav
+  Footer.tsx          # Footer with copyright + links
+  Hero.tsx            # Hero section with CTAs
+  WorkGrid.tsx        # Bento-style project grid
+  Statement.tsx       # Founders quote with accent line
+  Services.tsx        # Sticky heading + service cards
+  Team.tsx            # Team portraits + bios
+  ContactCTA.tsx      # Closing CTA with background watermark
+  ScrollReveal.tsx    # Client component for scroll-triggered animations
+content/
+  projects.ts         # Typed project data (Mirror, Calendar, Apparel, etc.)
+public/
+  images/mirror/      # 13 Mirror app screenshots
+  images/portraits/   # casey.jpg, nick.jpg
+  humans.txt          # Credits
+```
+
+## Design Tokens
+Defined in `app/globals.css` via CSS custom properties and Tailwind v4 `@theme inline`.
+Colors: green (#3b9c6f), blue (#4a8fd4), cream (#faf9f6), ink (#1a1a1a), plus tints.
 
 ## Pre-Production Checklist
 - [ ] All forms have proper validation
