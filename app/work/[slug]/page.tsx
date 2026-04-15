@@ -27,13 +27,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 }
 
 const mirrorScreenshots = [
-  "today-dark.png",
-  "reflect-dark.png",
-  "plan-dark.png",
-  "add-action-dark.png",
-  "add-goal-dark.png",
-  "add-routine-dark.png",
-  "settings-dark.png",
+  "today-dark.webp",
+  "reflect-dark.webp",
+  "plan-dark.webp",
+  "add-action-dark.webp",
+  "add-goal-dark.webp",
+  "add-routine-dark.webp",
+  "settings-dark.webp",
 ];
 
 export default async function WorkPage({ params }: Props) {
@@ -86,9 +86,10 @@ export default async function WorkPage({ params }: Props) {
                     >
                       <Image
                         src={`/images/mirror/${file}`}
-                        alt={file.replace(/-/g, " ").replace(".png", "")}
+                        alt={file.replace(/-/g, " ").replace(".webp", "")}
                         width={300}
                         height={600}
+                        sizes="(max-width: 768px) 50vw, 33vw"
                         className="rounded-xl w-full h-auto"
                       />
                     </div>

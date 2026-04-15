@@ -39,8 +39,9 @@ export default function AboutPage() {
                 src="/images/portraits/casey.jpg"
                 alt="Casey Ring"
                 width={80}
-                height={80}
-                className="rounded-2xl object-cover shrink-0 w-[80px] h-[80px]"
+                height={104}
+                sizes="80px"
+                className="rounded-2xl object-cover shrink-0 w-[80px] h-[104px]"
               />
               <div>
                 <h3 className="font-sans text-[1.1rem] font-bold text-ink mb-1">Casey Ring</h3>
@@ -55,8 +56,9 @@ export default function AboutPage() {
                 src="/images/portraits/nick.jpg"
                 alt="Nick Jackson"
                 width={80}
-                height={80}
-                className="rounded-2xl object-cover shrink-0 w-[80px] h-[80px]"
+                height={104}
+                sizes="80px"
+                className="rounded-2xl object-cover shrink-0 w-[80px] h-[104px]"
               />
               <div>
                 <h3 className="font-sans text-[1.1rem] font-bold text-ink mb-1">Nick Jackson</h3>
