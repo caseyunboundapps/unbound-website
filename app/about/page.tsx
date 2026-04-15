@@ -39,12 +39,13 @@ export default function AboutPage() {
                 src="/images/portraits/casey.jpg"
                 alt="Casey Ring"
                 width={80}
-                height={80}
-                className="rounded-2xl object-cover shrink-0 w-[80px] h-[80px]"
+                height={104}
+                sizes="80px"
+                className="rounded-2xl object-cover shrink-0 w-[80px] h-[104px]"
               />
               <div>
                 <h3 className="font-sans text-[1.1rem] font-bold text-ink mb-1">Casey Ring</h3>
-                <span className="font-mono text-[0.6rem] text-green mb-2 block">Product + Engineering</span>
+                <span className="font-mono text-[0.6rem] text-green-dim mb-2 block">Product + Engineering</span>
                 <p className="text-[0.9rem] text-text-secondary leading-[1.6] max-w-[320px]">
                   Builds the products, writes the code, designs the interfaces. Thinks in systems.
                 </p>
@@ -55,12 +56,13 @@ export default function AboutPage() {
                 src="/images/portraits/nick.jpg"
                 alt="Nick Jackson"
                 width={80}
-                height={80}
-                className="rounded-2xl object-cover shrink-0 w-[80px] h-[80px]"
+                height={104}
+                sizes="80px"
+                className="rounded-2xl object-cover shrink-0 w-[80px] h-[104px]"
               />
               <div>
                 <h3 className="font-sans text-[1.1rem] font-bold text-ink mb-1">Nick Jackson</h3>
-                <span className="font-mono text-[0.6rem] text-green mb-2 block">Strategy + Operations</span>
+                <span className="font-mono text-[0.6rem] text-green-dim mb-2 block">Strategy + Operations</span>
                 <p className="text-[0.9rem] text-text-secondary leading-[1.6] max-w-[320px]">
                   The reason things actually get finished. Strategy, ops, and keeping the whole machine running.
                 </p>

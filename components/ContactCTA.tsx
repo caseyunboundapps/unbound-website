@@ -25,7 +25,7 @@ export default function ContactCTA() {
           <div className="flex gap-3 justify-center max-sm:flex-col max-sm:items-center">
             <a
               href="https://usemirror.app"
-              className="inline-flex items-center gap-2 font-mono text-[0.7rem] font-medium px-6 py-3 rounded-pill bg-green text-white hover:bg-green-dim hover:-translate-y-0.5 hover:shadow-[0_6px_20px_rgba(59,156,111,0.2)] transition-all duration-300"
+              className="inline-flex items-center gap-2 font-mono text-[0.7rem] font-medium px-6 py-3 rounded-pill bg-green-dim text-white hover:bg-[#235f43] hover:-translate-y-0.5 hover:shadow-[0_6px_20px_rgba(45,122,86,0.2)] transition-all duration-300"
             >
               Try Mirror
             </a>

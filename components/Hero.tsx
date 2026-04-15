@@ -26,7 +26,7 @@ export default function Hero() {
           <div className="flex gap-2.5">
             <a
               href="https://usemirror.app"
-              className="inline-flex items-center gap-2 font-mono text-[0.7rem] font-medium px-6 py-3 rounded-pill bg-green text-white hover:bg-green-dim hover:-translate-y-0.5 hover:shadow-[0_6px_20px_rgba(59,156,111,0.2)] transition-all duration-300"
+              className="inline-flex items-center gap-2 font-mono text-[0.7rem] font-medium px-6 py-3 rounded-pill bg-green-dim text-white hover:bg-[#235f43] hover:-translate-y-0.5 hover:shadow-[0_6px_20px_rgba(45,122,86,0.2)] transition-all duration-300"
             >
               Try Mirror
             </a>
@@ -42,12 +42,6 @@ export default function Hero() {
 
       {/* Scroll hint */}
       <div className="absolute bottom-10 left-1/2 w-px h-12 bg-gradient-to-b from-transparent to-text-tertiary animate-[scrollPulse_2.5s_ease-in-out_infinite]" />
-      <style>{`
-        @keyframes scrollPulse {
-          0%, 100% { opacity: 0.3; transform: translateX(-50%) scaleY(0.6); }
-          50% { opacity: 0.7; transform: translateX(-50%) scaleY(1); }
-        }
-      `}</style>
     </section>
   );
 }

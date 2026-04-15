@@ -22,7 +22,7 @@ export const projects: Project[] = [
     status: "live",
     statusLabel: "Live on App Store",
     tier: "featured",
-    image: "/images/mirror/today-dark.png",
+    image: "/images/mirror/today-dark.webp",
     url: "https://usemirror.app",
   },
   {

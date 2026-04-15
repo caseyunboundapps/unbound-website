@@ -27,13 +27,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 }
 
 const mirrorScreenshots = [
-  "today-dark.png",
-  "reflect-dark.png",
-  "plan-dark.png",
-  "add-action-dark.png",
-  "add-goal-dark.png",
-  "add-routine-dark.png",
-  "settings-dark.png",
+  "today-dark.webp",
+  "reflect-dark.webp",
+  "plan-dark.webp",
+  "add-action-dark.webp",
+  "add-goal-dark.webp",
+  "add-routine-dark.webp",
+  "settings-dark.webp",
 ];
 
 export default async function WorkPage({ params }: Props) {
@@ -86,9 +86,10 @@ export default async function WorkPage({ params }: Props) {
                     >
                       <Image
                         src={`/images/mirror/${file}`}
-                        alt={file.replace(/-/g, " ").replace(".png", "")}
+                        alt={file.replace(/-/g, " ").replace(".webp", "")}
                         width={300}
                         height={600}
+                        sizes="(max-width: 768px) 50vw, 33vw"
                         className="rounded-xl w-full h-auto"
                       />
                     </div>
@@ -113,7 +114,7 @@ export default async function WorkPage({ params }: Props) {
               <div className="flex gap-3">
                 <a
                   href="https://usemirror.app"
-                  className="inline-flex items-center gap-2 font-mono text-[0.7rem] font-medium px-6 py-3 rounded-pill bg-green text-white hover:bg-green-dim hover:-translate-y-0.5 transition-all duration-300"
+                  className="inline-flex items-center gap-2 font-mono text-[0.7rem] font-medium px-6 py-3 rounded-pill bg-green-dim text-white hover:bg-[#235f43] hover:-translate-y-0.5 transition-all duration-300"
                 >
                   Download on the App Store
                 </a>
