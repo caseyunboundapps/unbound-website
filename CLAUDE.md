@@ -111,6 +111,9 @@ public/
 Defined in `app/globals.css` via CSS custom properties and Tailwind v4 `@theme inline`.
 Colors: green (#3b9c6f), blue (#4a8fd4), cream (#faf9f6), ink (#1a1a1a), plus tints.
 
+## Design System
+Read DESIGN_SYSTEM.md before any UI work. All styling decisions must follow the design system tokens and patterns. Do not improvise new values.
+
 ## Pre-Production Checklist
 - [ ] All forms have proper validation
 - [ ] Error states are user-friendly
