@@ -2,6 +2,7 @@ import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import WorkGrid from "@/components/WorkGrid";
 import Statement from "@/components/Statement";
+import Bros from "@/components/Bros";
 import Services from "@/components/Services";
 import Team from "@/components/Team";
 import ContactCTA from "@/components/ContactCTA";
@@ -15,6 +16,7 @@ export default function Home() {
         <Hero />
         <WorkGrid />
         <Statement />
+        <Bros />
         <Services />
         <Team />
         <ContactCTA />

@@ -1,12 +1,9 @@
-import Link from "next/link";
 import { projects } from "@/content/projects";
 import ScrollReveal from "./ScrollReveal";
 
 export default function WorkGrid() {
   const featured = projects.find((p) => p.tier === "featured")!;
-  const secondary = projects.find((p) => p.tier === "secondary")!;
-  const tertiary = projects.find((p) => p.tier === "tertiary")!;
-  const compact = projects.filter((p) => p.tier === "compact");
+  const secondary = projects.filter((p) => p.tier === "secondary");
 
   return (
     <section className="px-14 pt-32 pb-24 max-lg:px-8 max-md:px-5" id="work">
@@ -17,16 +14,16 @@ export default function WorkGrid() {
             What we&apos;re<br />building
           </h2>
           <div className="font-mono text-[0.65rem] text-text-tertiary text-right leading-[1.7]">
-            5 products in motion<br />More coming
+            3 products<br />More coming
           </div>
         </div>
       </ScrollReveal>
 
       {/* Bento grid */}
-      <div className="grid grid-cols-[1.15fr_1fr] grid-rows-[auto_auto] gap-5 max-md:grid-cols-1">
+      <div className="grid grid-cols-2 gap-5 max-md:grid-cols-1">
         {/* Featured: Mirror */}
-        <ScrollReveal delay={1} className="row-span-2 max-md:row-span-1">
-          <Link href="/work/mirror" className="block h-full">
+        <ScrollReveal delay={1} className="col-span-2 max-md:col-span-1">
+          <a href={featured.url} target="_blank" rel="noopener noreferrer" className="block h-full">
             <div className="rounded-2xl overflow-hidden relative cursor-pointer hover:scale-[0.985] transition-transform duration-400 h-full min-h-[540px] max-md:min-h-[420px]">
               <div className="h-full p-8 flex flex-col justify-end relative z-1 bg-gradient-to-br from-[#2C2B2A] to-[#1a1918]">
                 {/* App preview mockup */}
@@ -59,67 +56,42 @@ export default function WorkGrid() {
                 </p>
               </div>
             </div>
-          </Link>
+          </a>
         </ScrollReveal>
 
-        {/* Secondary: Calendar */}
-        <ScrollReveal delay={2}>
-          <div className="rounded-2xl overflow-hidden cursor-pointer hover:scale-[0.985] transition-transform duration-400">
-            <div className="p-8 flex flex-col justify-end min-h-[258px] bg-gradient-to-br from-[#e8eef6] to-[#dce6f2]">
-              <span className="font-mono text-[0.55rem] font-medium px-3 py-1 rounded-pill bg-[rgba(74,143,212,0.12)] text-blue inline-block w-fit mb-3">
-                {secondary.statusLabel}
-              </span>
-              <h3 className="font-sans text-[1.5rem] font-bold text-ink mb-1">
-                {secondary.name}
-              </h3>
-              <p className="text-[0.9rem] leading-[1.55] text-text-secondary max-w-[280px]">
-                {secondary.tagline}
-              </p>
-            </div>
-          </div>
-        </ScrollReveal>
-
-        {/* Tertiary: Apparel */}
-        <ScrollReveal delay={3}>
-          <Link href="/work/apparel" className="block">
-            <div className="rounded-2xl overflow-hidden cursor-pointer hover:scale-[0.985] transition-transform duration-400">
-              <div className="p-8 flex flex-col justify-end min-h-[258px] bg-warm-gray">
-                <span className="font-mono text-[0.55rem] font-medium px-3 py-1 rounded-pill bg-[rgba(0,0,0,0.04)] text-text-tertiary inline-block w-fit mb-3">
-                  {tertiary.statusLabel}
-                </span>
-                <h3 className="font-sans text-[1.5rem] font-bold text-ink mb-1">
-                  {tertiary.name}
-                </h3>
-                <p className="text-[0.9rem] leading-[1.55] text-text-secondary max-w-[280px]">
-                  {tertiary.tagline}
-                </p>
+        {/* Secondary cards */}
+        {secondary.map((project, i) => (
+          <ScrollReveal key={project.slug} delay={(i + 2) as 0 | 1 | 2 | 3}>
+            <a href={project.url} target="_blank" rel="noopener noreferrer" className="block">
+              <div className="rounded-2xl overflow-hidden cursor-pointer hover:scale-[0.985] transition-transform duration-400">
+                <div
+                  className={`p-8 flex flex-col justify-end min-h-[258px] ${
+                    project.slug === "golf-ai"
+                      ? "bg-gradient-to-br from-[#e8eef6] to-[#dce6f2]"
+                      : "bg-warm-gray"
+                  }`}
+                >
+                  <span
+                    className={`font-mono text-[0.55rem] font-medium px-3 py-1 rounded-pill inline-block w-fit mb-3 ${
+                      project.status === "live"
+                        ? "bg-[rgba(74,143,212,0.12)] text-blue"
+                        : "bg-[rgba(0,0,0,0.04)] text-text-tertiary"
+                    }`}
+                  >
+                    {project.statusLabel}
+                  </span>
+                  <h3 className="font-sans text-[1.5rem] font-bold text-ink mb-1">
+                    {project.name}
+                  </h3>
+                  <p className="text-[0.9rem] leading-[1.55] text-text-secondary max-w-[280px]">
+                    {project.tagline}
+                  </p>
+                </div>
               </div>
-            </div>
-          </Link>
-        </ScrollReveal>
+            </a>
+          </ScrollReveal>
+        ))}
       </div>
-
-      {/* Compact cards row */}
-      <ScrollReveal>
-        <div className="flex gap-5 mt-5 max-md:flex-col">
-          {compact.map((project) => (
-            <div
-              key={project.slug}
-              className="flex-1 px-7 py-6 bg-white rounded-xl border border-border hover:border-blue hover:-translate-y-[3px] hover:shadow-lg transition-all duration-300 cursor-pointer"
-            >
-              <h4 className="font-sans text-base font-semibold text-ink mb-1">
-                {project.name}
-              </h4>
-              <p className="text-[0.85rem] text-text-secondary">
-                {project.tagline}
-              </p>
-              <span className="font-mono text-[0.55rem] text-text-tertiary mt-2.5 block">
-                {project.statusLabel}
-              </span>
-            </div>
-          ))}
-        </div>
-      </ScrollReveal>
     </section>
   );
 }
