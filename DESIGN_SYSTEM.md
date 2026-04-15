@@ -179,12 +179,14 @@ Applied via: `px-14 max-lg:px-8 max-md:px-5`
 
 Defined in `@theme inline` in globals.css:
 
-| Token  | Value                            | Usage                     |
-|--------|----------------------------------|---------------------------|
-| sm     | `0 1px 2px rgba(0,0,0,0.04)`    | Subtle depth              |
-| md     | `0 4px 12px rgba(0,0,0,0.06)`   | Resting cards             |
-| lg     | `0 8px 24px rgba(0,0,0,0.08)`   | Card hover states         |
-| xl     | `0 16px 40px rgba(0,0,0,0.1)`   | Prominent elements        |
+| Token  | Value                                      | Usage                     |
+|--------|--------------------------------------------|---------------------------|
+| sm     | `0 1px 2px rgba(59,156,111,0.04)`          | Subtle depth              |
+| md     | `0 4px 12px rgba(59,156,111,0.06)`         | Resting cards             |
+| lg     | `0 8px 24px rgba(59,156,111,0.08)`         | Card hover states         |
+| xl     | `0 16px 40px rgba(59,156,111,0.1)`         | Prominent elements        |
+
+Shadow tokens use the brand green (`#3b9c6f`) instead of black. Same opacities, warmer tint.
 
 ### One-off shadows (inline)
 | Value                                  | Usage                |
@@ -238,6 +240,34 @@ Labels: `font-mono text-[0.65rem] text-text-tertiary tracking-[0.08em] uppercase
 | Nav      | `text-secondary` | `ink`     | 300ms    |
 | Footer   | `text-secondary` | `ink`     | 200ms    |
 | Inline   | `green`          | `green-dim` | —     |
+
+### Dark Section (ContactCTA + Footer)
+
+The closing block of the page inverts to `bg-ink` to create a clear "take action" zone.
+
+| Element            | Class / Value                                  |
+|--------------------|------------------------------------------------|
+| Section bg         | `bg-ink`                                       |
+| Heading            | `text-cream`                                   |
+| Body text          | `text-cream/60`                                |
+| Tertiary text      | `text-cream/40`                                |
+| Links              | `text-cream/50 hover:text-cream`               |
+| Border             | `border-white/10`                              |
+| Watermark          | `text-[rgba(250,249,246,0.04)]`                |
+| Secondary button   | `text-cream shadow-[inset_0_0_0_1.5px_rgba(250,249,246,0.2)]` hover: `0.6` opacity |
+
+Primary button (green) works unchanged on dark.
+
+### Service Card CTA
+
+Each service card includes a contact link after the description:
+
+```
+font-mono text-[0.6rem] font-medium text-green hover:text-green-dim
+transition-colors duration-200 mt-3 inline-block
+```
+
+Links to `/contact` with no query params.
 
 ### Section Containers
 
