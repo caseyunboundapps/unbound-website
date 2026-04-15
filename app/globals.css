@@ -12,7 +12,7 @@
   --warm-gray: #f2f0ec;
   --text: #2a2a2a;
   --text-secondary: #7a7a7a;
-  --text-tertiary: #b0b0b0;
+  --text-tertiary: #767676;
   --border: #e8e5df;
 }
 
@@ -89,3 +89,21 @@ body::after {
 .reveal-d1 { transition-delay: 0.1s; }
 .reveal-d2 { transition-delay: 0.2s; }
 .reveal-d3 { transition-delay: 0.3s; }
+
+/* ─── Reduced Motion ─── */
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+  * {
+    animation-duration: 0s !important;
+  }
+}
+
+/* ─── Keyframes ─── */
+@keyframes scrollPulse {
+  0%, 100% { opacity: 0.3; transform: translateX(-50%) scaleY(0.6); }
+  50% { opacity: 0.7; transform: translateX(-50%) scaleY(1); }
+}

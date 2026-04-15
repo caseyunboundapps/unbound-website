@@ -41,7 +41,7 @@ export default function Team() {
                 <h4 className="font-sans text-[1.1rem] font-bold text-ink mb-1">
                   {person.name}
                 </h4>
-                <span className="font-mono text-[0.6rem] text-green mb-2 block">
+                <span className="font-mono text-[0.6rem] text-green-dim mb-2 block">
                   {person.role}
                 </span>
                 <p className="text-[0.9rem] text-text-secondary leading-[1.6] max-w-[320px]">
