@@ -51,6 +51,7 @@ yarn-error.log*
 
 # Misc
 *.pem
+.mcp.json
 
 # Vercel
 .vercel

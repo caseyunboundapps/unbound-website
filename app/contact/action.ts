@@ -51,7 +51,9 @@ export async function submitContact(
       };
     }
   } else {
-    console.log("Contact form submission:", { name, email, message });
+    if (process.env.NODE_ENV !== "production") {
+      console.log("Contact form submission:", { name, email, message });
+    }
   }
 
   return { success: true };

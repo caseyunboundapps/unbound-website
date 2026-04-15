@@ -69,11 +69,13 @@ export default function ContactForm() {
           type="text"
           id="name"
           name="name"
+          aria-invalid={!!errors.name}
+          aria-describedby="name-error"
           className="w-full font-sans text-[0.95rem] bg-cream border border-border rounded-lg px-4 py-3 text-ink placeholder:text-text-tertiary focus:outline-none focus:ring-2 focus:ring-green focus:border-transparent transition-shadow"
           placeholder="Your name"
         />
         {errors.name && (
-          <p className="text-red-600 text-[0.8rem] mt-1.5">{errors.name}</p>
+          <p id="name-error" className="text-red-600 text-[0.8rem] mt-1.5">{errors.name}</p>
         )}
       </div>
 
@@ -88,11 +90,13 @@ export default function ContactForm() {
           type="email"
           id="email"
           name="email"
+          aria-invalid={!!errors.email}
+          aria-describedby="email-error"
           className="w-full font-sans text-[0.95rem] bg-cream border border-border rounded-lg px-4 py-3 text-ink placeholder:text-text-tertiary focus:outline-none focus:ring-2 focus:ring-green focus:border-transparent transition-shadow"
           placeholder="you@example.com"
         />
         {errors.email && (
-          <p className="text-red-600 text-[0.8rem] mt-1.5">{errors.email}</p>
+          <p id="email-error" className="text-red-600 text-[0.8rem] mt-1.5">{errors.email}</p>
         )}
       </div>
 
@@ -108,11 +112,13 @@ export default function ContactForm() {
           name="message"
           rows={6}
           maxLength={2000}
+          aria-invalid={!!errors.message}
+          aria-describedby="message-error"
           className="w-full font-sans text-[0.95rem] bg-cream border border-border rounded-lg px-4 py-3 text-ink placeholder:text-text-tertiary focus:outline-none focus:ring-2 focus:ring-green focus:border-transparent transition-shadow resize-y"
           placeholder="Tell us what you're working on..."
         />
         {errors.message && (
-          <p className="text-red-600 text-[0.8rem] mt-1.5">{errors.message}</p>
+          <p id="message-error" className="text-red-600 text-[0.8rem] mt-1.5">{errors.message}</p>
         )}
       </div>
 
