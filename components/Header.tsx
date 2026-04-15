@@ -20,7 +20,7 @@ export default function Header() {
           About
         </Link>
         <Link
-          href="/#contact"
+          href="/contact"
           className="font-mono text-[0.7rem] font-medium text-cream bg-ink px-5 py-2.5 rounded-pill hover:bg-green hover:text-white hover:-translate-y-px transition-all duration-300"
         >
           Get in touch

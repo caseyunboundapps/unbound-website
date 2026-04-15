@@ -34,6 +34,7 @@ This file provides guidance to Claude Code when working with this repository.
 - **Framework:** Next.js 16 (App Router, TypeScript strict)
 - **Styling:** Tailwind CSS v4 (CSS-first config via `@theme` in globals.css)
 - **Fonts:** Martian Mono (display/mono) + Figtree (body/sans) via `next/font/google`
+- **Email:** Resend (contact form; falls back to console.log without API key)
 - **Deployment:** Vercel (live at unboundapps.com)
 
 ## Development Commands
@@ -82,6 +83,8 @@ app/
   robots.ts           # robots.txt generator
   sitemap.ts          # sitemap.xml generator
   work/[slug]/page.tsx  # Case study template (Mirror, Apparel)
+  contact/page.tsx    # Contact page with form
+  contact/action.ts   # Server action (Resend email / console stub)
   about/page.tsx      # About page
   privacy/page.tsx    # Privacy policy
   terms/page.tsx      # Terms of service
@@ -94,6 +97,7 @@ components/
   Services.tsx        # Sticky heading + service cards
   Team.tsx            # Team portraits + bios
   ContactCTA.tsx      # Closing CTA with background watermark
+  ContactForm.tsx     # Contact form with client + server validation
   ScrollReveal.tsx    # Client component for scroll-triggered animations
 content/
   projects.ts         # Typed project data (Mirror, Calendar, Apparel, etc.)
