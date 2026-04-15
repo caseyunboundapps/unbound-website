@@ -31,7 +31,7 @@ export default function Hero() {
               Try Mirror
             </a>
             <a
-              href="#contact"
+              href="/contact"
               className="inline-flex items-center gap-2 font-mono text-[0.7rem] font-medium px-6 py-3 rounded-pill text-ink shadow-[inset_0_0_0_1.5px_var(--border)] hover:shadow-[inset_0_0_0_1.5px_var(--ink)] hover:-translate-y-0.5 transition-all duration-300"
             >
               Work with us
