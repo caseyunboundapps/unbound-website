@@ -33,8 +33,9 @@ export default function Team() {
                 src={person.photo}
                 alt={person.name}
                 width={80}
-                height={80}
-                className="rounded-2xl object-cover shrink-0 w-[80px] h-[80px]"
+                height={104}
+                sizes="80px"
+                className="rounded-2xl object-cover shrink-0 w-[80px] h-[104px]"
               />
               <div>
                 <h4 className="font-sans text-[1.1rem] font-bold text-ink mb-1">

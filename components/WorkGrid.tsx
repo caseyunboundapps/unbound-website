@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { projects } from "@/content/projects";
 import ScrollReveal from "./ScrollReveal";
 
