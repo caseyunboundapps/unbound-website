@@ -34,7 +34,7 @@ This file provides guidance to Claude Code when working with this repository.
 - **Framework:** Next.js 16 (App Router, TypeScript strict)
 - **Styling:** Tailwind CSS v4 (CSS-first config via `@theme` in globals.css)
 - **Fonts:** Martian Mono (display/mono) + Figtree (body/sans) via `next/font/google`
-- **Deployment:** Vercel (planned)
+- **Deployment:** Vercel (live at unboundapps.com)
 
 ## Development Commands
 - `npm run dev` - Start development server (localhost:3000)
