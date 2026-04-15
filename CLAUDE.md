@@ -34,7 +34,7 @@ This file provides guidance to Claude Code when working with this repository.
 - **Framework:** Next.js 16 (App Router, TypeScript strict)
 - **Styling:** Tailwind CSS v4 (CSS-first config via `@theme` in globals.css)
 - **Fonts:** Martian Mono (display/mono) + Figtree (body/sans) via `next/font/google`
-- **Email:** Resend (contact form; falls back to console.log without API key)
+- **Email:** Resend (contact form; falls back to console.log in dev without API key)
 - **Deployment:** Vercel (live at unboundapps.com)
 
 ## Development Commands
@@ -89,7 +89,7 @@ app/
   privacy/page.tsx    # Privacy policy
   terms/page.tsx      # Terms of service
 components/
-  Header.tsx          # Fixed header with wordmark + nav
+  Header.tsx          # Fixed header with wordmark + nav + mobile hamburger menu (client component)
   Footer.tsx          # Footer with copyright + links
   Hero.tsx            # Hero section with CTAs
   WorkGrid.tsx        # Bento-style project grid
