@@ -113,7 +113,7 @@ export default async function WorkPage({ params }: Props) {
               <div className="flex gap-3">
                 <a
                   href="https://usemirror.app"
-                  className="inline-flex items-center gap-2 font-mono text-[0.7rem] font-medium px-6 py-3 rounded-pill bg-green text-white hover:bg-green-dim hover:-translate-y-0.5 transition-all duration-300"
+                  className="inline-flex items-center gap-2 font-mono text-[0.7rem] font-medium px-6 py-3 rounded-pill bg-green-dim text-white hover:bg-[#235f43] hover:-translate-y-0.5 transition-all duration-300"
                 >
                   Download on the App Store
                 </a>
