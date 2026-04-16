@@ -1,23 +1,6 @@
 import Link from "next/link";
 import ScrollReveal from "./ScrollReveal";
-
-const services = [
-  {
-    num: "01",
-    title: "Product strategy",
-    desc: "What to build, what to skip, how to get to users fast.",
-  },
-  {
-    num: "02",
-    title: "App development",
-    desc: "Native and web. From first commit to production.",
-  },
-  {
-    num: "03",
-    title: "AI + Automations",
-    desc: "Models, agents, and workflows wired into your product or operations.",
-  },
-];
+import { servicesHeading, services } from "@/content/services";
 
 export default function Services() {
   return (
@@ -27,10 +10,10 @@ export default function Services() {
         <ScrollReveal>
           <div className="sticky top-32 max-lg:static">
             <h2 className="font-sans text-[2.5rem] font-extrabold tracking-[-0.035em] text-ink leading-[1.08] mb-5">
-              We also help<br />teams <span className="text-blue">ship.</span>
+              {servicesHeading.title}{servicesHeading.titleBreak && <br />}{servicesHeading.titlePrefix}<span className="text-blue">{servicesHeading.titleAccent}</span>
             </h2>
             <p className="text-[1.05rem] text-text-secondary leading-[1.7] max-w-[340px]">
-              We work with a small number of teams at a time. If you&apos;re building a product and need someone who&apos;s been through the whole cycle, we should talk.
+              {servicesHeading.body}
             </p>
           </div>
         </ScrollReveal>

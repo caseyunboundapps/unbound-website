@@ -1,33 +1,17 @@
 import Image from "next/image";
 import ScrollReveal from "./ScrollReveal";
-
-const people = [
-  {
-    name: "Casey Ring",
-    role: "Product + Engineering",
-    bio: "Builds the products, writes the code, designs the interfaces. Thinks in systems.",
-    photo: "/images/portraits/casey.jpg",
-    gradient: "from-green to-green-dim",
-  },
-  {
-    name: "Nick Jackson",
-    role: "Strategy + Operations",
-    bio: "The reason things actually get finished. Strategy, ops, and keeping the whole machine running.",
-    photo: "/images/portraits/nick.jpg",
-    gradient: "from-blue to-[#3a7fc4]",
-  },
-];
+import { teamSection, team } from "@/content/team";
 
 export default function Team() {
   return (
     <section className="py-24 px-14 bg-warm-gray max-lg:px-8 max-md:px-5" id="about">
       <p className="font-mono text-[0.6rem] font-medium text-text-tertiary tracking-[0.08em] uppercase mb-12">
-        Who we are
+        {teamSection.label}
       </p>
 
       <ScrollReveal>
         <div className="flex gap-16 max-md:flex-col max-md:gap-10">
-          {people.map((person) => (
+          {team.map((person) => (
             <div key={person.name} className="flex gap-6 items-start">
               <Image
                 src={person.photo}

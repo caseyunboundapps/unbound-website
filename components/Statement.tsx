@@ -1,4 +1,5 @@
 import ScrollReveal from "./ScrollReveal";
+import { statement } from "@/content/homepage";
 
 export default function Statement() {
   return (
@@ -9,11 +10,11 @@ export default function Statement() {
       <ScrollReveal>
         <div className="pl-6 max-md:pl-0">
           <blockquote className="font-sans text-[clamp(1.75rem,3.5vw,2.75rem)] font-semibold leading-[1.35] tracking-[-0.025em] text-ink max-w-[800px]">
-            We started this because we kept having ideas and wanted somewhere to actually build them. Not pitch decks. Not prototypes that sit in a folder.{" "}
-            <span className="text-green">Real things, used by real people.</span>
+            {statement.quote}{" "}
+            <span className="text-green">{statement.quoteAccent}</span>
           </blockquote>
           <p className="font-mono text-[0.65rem] text-text-tertiary mt-8">
-            Casey Ring &amp; Nick Jackson, Founders
+            {statement.attribution}
           </p>
         </div>
       </ScrollReveal>

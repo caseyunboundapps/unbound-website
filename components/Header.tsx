@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
+import { siteNav } from "@/content/site";
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -37,7 +38,7 @@ export default function Header() {
         href="#main"
         className="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus:z-50 focus:px-4 focus:py-2 focus:bg-ink focus:text-cream focus:rounded-lg font-mono text-[0.7rem]"
       >
-        Skip to main content
+        {siteNav.skipToMain}
       </a>
 
       <div className="flex items-center justify-between px-14 py-7 max-lg:px-8 max-md:px-5 max-md:py-4">
@@ -45,27 +46,24 @@ export default function Header() {
           href="/"
           className="font-mono text-[0.8rem] font-bold text-ink tracking-[-0.01em]"
         >
-          Unbound Studios
+          {siteNav.wordmark}
         </Link>
 
         <nav className="flex items-center gap-10 max-md:gap-4">
+          {siteNav.links.map((link) => (
+            <Link
+              key={link.href}
+              href={link.href}
+              className="font-sans text-[0.9rem] font-medium text-text-secondary hover:text-ink transition-colors duration-300 max-md:hidden"
+            >
+              {link.label}
+            </Link>
+          ))}
           <Link
-            href="/#work"
-            className="font-sans text-[0.9rem] font-medium text-text-secondary hover:text-ink transition-colors duration-300 max-md:hidden"
-          >
-            Work
-          </Link>
-          <Link
-            href="/about"
-            className="font-sans text-[0.9rem] font-medium text-text-secondary hover:text-ink transition-colors duration-300 max-md:hidden"
-          >
-            About
-          </Link>
-          <Link
-            href="/contact"
+            href={siteNav.cta.href}
             className="font-mono text-[0.7rem] font-medium text-cream bg-ink px-5 py-2.5 rounded-pill hover:bg-green hover:text-white hover:-translate-y-px transition-all duration-300 max-md:hidden"
           >
-            Get in touch
+            {siteNav.cta.label}
           </Link>
 
           {/* Mobile hamburger */}
@@ -91,26 +89,22 @@ export default function Header() {
       {/* Mobile menu panel */}
       {menuOpen && (
         <div className="hidden max-md:flex flex-col gap-4 px-5 pb-6 border-t border-border bg-cream">
+          {siteNav.links.map((link) => (
+            <Link
+              key={link.href}
+              href={link.href}
+              onClick={() => setMenuOpen(false)}
+              className="font-sans text-[1rem] font-medium text-text-secondary hover:text-ink transition-colors duration-200 py-2"
+            >
+              {link.label}
+            </Link>
+          ))}
           <Link
-            href="/#work"
-            onClick={() => setMenuOpen(false)}
-            className="font-sans text-[1rem] font-medium text-text-secondary hover:text-ink transition-colors duration-200 py-2"
-          >
-            Work
-          </Link>
-          <Link
-            href="/about"
-            onClick={() => setMenuOpen(false)}
-            className="font-sans text-[1rem] font-medium text-text-secondary hover:text-ink transition-colors duration-200 py-2"
-          >
-            About
-          </Link>
-          <Link
-            href="/contact"
+            href={siteNav.cta.href}
             onClick={() => setMenuOpen(false)}
             className="inline-block text-center font-mono text-[0.7rem] font-medium text-cream bg-ink px-5 py-2.5 rounded-pill hover:bg-green hover:text-white transition-all duration-300"
           >
-            Get in touch
+            {siteNav.cta.label}
           </Link>
         </div>
       )}

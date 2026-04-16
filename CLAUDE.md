@@ -76,13 +76,12 @@ Before marking work complete, verify:
 ```
 app/
   layout.tsx          # Root layout with fonts, metadata, JSON-LD, Plausible
-  page.tsx            # Homepage (Hero, WorkGrid, Statement, Services, Team, CTA)
+  page.tsx            # Homepage (Hero, WorkGrid, Statement, Bros, Services, Team, CTA)
   not-found.tsx       # 404 page
   globals.css         # Tailwind v4 @theme + CSS custom properties + base styles
   icon.svg            # Favicon
   robots.ts           # robots.txt generator
   sitemap.ts          # sitemap.xml generator
-  work/[slug]/page.tsx  # Case study template (Mirror, Apparel)
   contact/page.tsx    # Contact page with form
   contact/action.ts   # Server action (Resend email / console stub)
   about/page.tsx      # About page
@@ -92,7 +91,8 @@ components/
   Header.tsx          # Fixed header with wordmark + nav + mobile hamburger menu (client component)
   Footer.tsx          # Footer with copyright + links
   Hero.tsx            # Hero section with CTAs
-  WorkGrid.tsx        # Bento-style project grid
+  WorkGrid.tsx        # Bento-style project grid (Mirror featured, Golf AI + Apparel secondary)
+  Bros.tsx            # Social links section (Instagram, TikTok, X, YouTube)
   Statement.tsx       # Founders quote with accent line
   Services.tsx        # Sticky heading + service cards
   Team.tsx            # Team portraits + bios
@@ -100,9 +100,9 @@ components/
   ContactForm.tsx     # Contact form with client + server validation
   ScrollReveal.tsx    # Client component for scroll-triggered animations
 content/
-  projects.ts         # Typed project data (Mirror, Calendar, Apparel, etc.)
+  projects.ts         # Typed project data (Mirror, Golf AI, Apparel)
+  bros.ts             # Social media links for Unbound Bros
 public/
-  images/mirror/      # 13 Mirror app screenshots
   images/portraits/   # casey.jpg, nick.jpg
   humans.txt          # Credits
 ```

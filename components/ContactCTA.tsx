@@ -1,4 +1,5 @@
 import ScrollReveal from "./ScrollReveal";
+import { contactCta } from "@/content/homepage";
 
 export default function ContactCTA() {
   return (
@@ -11,29 +12,29 @@ export default function ContactCTA() {
       <div className="relative z-1">
         <ScrollReveal>
           <h2 className="font-sans text-[clamp(2.5rem,5vw,4rem)] font-extrabold tracking-[-0.04em] text-cream mb-4">
-            Let&apos;s build something.
+            {contactCta.heading}
           </h2>
         </ScrollReveal>
 
         <ScrollReveal delay={1}>
           <p className="text-[1.1rem] text-cream/60 mb-10 max-w-[440px] mx-auto leading-[1.65]">
-            Try one of our apps, or tell us what you&apos;re working on.
+            {contactCta.body}
           </p>
         </ScrollReveal>
 
         <ScrollReveal delay={2}>
           <div className="flex gap-3 justify-center max-sm:flex-col max-sm:items-center">
             <a
-              href="https://usemirror.app"
+              href={contactCta.primaryCta.url}
               className="inline-flex items-center gap-2 font-mono text-[0.7rem] font-medium px-6 py-3 rounded-pill bg-green-dim text-white hover:bg-[#235f43] hover:-translate-y-0.5 hover:shadow-[0_6px_20px_rgba(45,122,86,0.2)] transition-all duration-300"
             >
-              Try Mirror
+              {contactCta.primaryCta.label}
             </a>
             <a
-              href="/contact"
+              href={contactCta.secondaryCta.url}
               className="inline-flex items-center gap-2 font-mono text-[0.7rem] font-medium px-6 py-3 rounded-pill text-cream shadow-[inset_0_0_0_1.5px_rgba(250,249,246,0.2)] hover:shadow-[inset_0_0_0_1.5px_rgba(250,249,246,0.6)] hover:-translate-y-0.5 transition-all duration-300"
             >
-              Start a conversation
+              {contactCta.secondaryCta.label}
             </a>
           </div>
         </ScrollReveal>
