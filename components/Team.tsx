@@ -10,28 +10,26 @@ export default function Team() {
       </p>
 
       <ScrollReveal>
-        <div className="flex gap-16 max-md:flex-col max-md:gap-10">
+        <div className="grid grid-cols-2 gap-12 max-md:grid-cols-1 max-md:gap-10">
           {team.map((person) => (
-            <div key={person.name} className="flex gap-6 items-start">
+            <div key={person.name} className="flex flex-col">
               <Image
                 src={person.photo}
                 alt={person.name}
-                width={80}
-                height={104}
-                sizes="80px"
-                className="rounded-2xl object-cover shrink-0 w-[80px] h-[104px]"
+                width={280}
+                height={340}
+                sizes="(max-width: 768px) 100vw, 280px"
+                className="rounded-2xl object-cover w-full max-w-[280px] aspect-[4/5] mb-6"
               />
-              <div>
-                <h4 className="font-sans text-[1.1rem] font-bold text-ink mb-1">
-                  {person.name}
-                </h4>
-                <span className="font-mono text-[0.6rem] text-green-dim mb-2 block">
-                  {person.role}
-                </span>
-                <p className="text-[0.9rem] text-text-secondary leading-[1.6] max-w-[320px]">
-                  {person.bio}
-                </p>
-              </div>
+              <h4 className="font-sans text-[1.25rem] font-bold text-ink mb-1">
+                {person.name}
+              </h4>
+              <span className="font-mono text-[0.6rem] text-green-dim mb-3 block">
+                {person.role}
+              </span>
+              <p className="text-[0.95rem] text-text-secondary leading-[1.65] max-w-[360px]">
+                {person.bio}
+              </p>
             </div>
           ))}
         </div>
