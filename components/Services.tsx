@@ -4,7 +4,7 @@ import { servicesHeading, services } from "@/content/services";
 
 export default function Services() {
   return (
-    <section className="px-14 pt-16 pb-32 max-lg:px-8 max-md:px-5">
+    <section className="px-14 pt-16 pb-32 bg-warm-gray max-lg:px-8 max-md:px-5">
       <div className="grid grid-cols-[1fr_1.5fr] gap-24 items-start max-lg:grid-cols-1 max-lg:gap-12">
         {/* Left: sticky heading */}
         <ScrollReveal>
