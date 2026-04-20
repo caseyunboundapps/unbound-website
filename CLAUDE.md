@@ -34,6 +34,7 @@ This file provides guidance to Claude Code when working with this repository.
 - **Framework:** Next.js 16 (App Router, TypeScript strict)
 - **Styling:** Tailwind CSS v4 (CSS-first config via `@theme` in globals.css)
 - **Fonts:** Martian Mono (display/mono) + Figtree (body/sans) via `next/font/google`
+- **Analytics:** PostHog (autocapture, session recordings, custom events)
 - **Email:** Resend (contact form; falls back to console.log in dev without API key)
 - **Deployment:** Vercel (live at unboundapps.com)
 
@@ -75,7 +76,9 @@ Before marking work complete, verify:
 ## Project Structure
 ```
 app/
-  layout.tsx          # Root layout with fonts, metadata, JSON-LD, Plausible
+  layout.tsx          # Root layout with fonts, metadata, JSON-LD, PostHog
+  providers.tsx       # PostHog client provider (autocapture + session recording)
+  error.tsx           # Error boundary with retry button
   page.tsx            # Homepage (Hero, WorkGrid, Statement, Bros, Services, Team, CTA)
   not-found.tsx       # 404 page
   globals.css         # Tailwind v4 @theme + CSS custom properties + base styles

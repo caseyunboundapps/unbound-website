@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
-import Script from "next/script";
 import { Figtree, Martian_Mono } from "next/font/google";
+import PostHogProviders from "./providers";
 import "./globals.css";
 
 const figtree = Figtree({
@@ -24,6 +24,10 @@ export const metadata: Metadata = {
       "Consumer apps, built in-house. Plus apps, AI, and automations for teams who want to ship faster.",
     siteName: "Unbound Studios",
     type: "website",
+    images: ["/opengraph-image"],
+  },
+  twitter: {
+    card: "summary_large_image",
   },
 };
 
@@ -37,14 +41,8 @@ export default function RootLayout({
       lang="en"
       className={`${figtree.variable} ${martianMono.variable} h-full antialiased`}
     >
-      <Script
-        defer
-        data-domain="unboundapps.com"
-        src="https://plausible.io/js/script.js"
-        strategy="afterInteractive"
-      />
       <body className="min-h-full flex flex-col">
-        {children}
+        <PostHogProviders>{children}</PostHogProviders>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{

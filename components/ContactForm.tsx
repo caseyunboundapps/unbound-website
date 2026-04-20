@@ -1,6 +1,7 @@
 "use client";
 
-import { useActionState, useState } from "react";
+import { useActionState, useEffect, useRef, useState } from "react";
+import posthog from "posthog-js";
 import { submitContact, type ContactState } from "@/app/contact/action";
 
 const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -11,6 +12,14 @@ export default function ContactForm() {
     { success: false }
   );
   const [errors, setErrors] = useState<Record<string, string>>({});
+  const tracked = useRef(false);
+
+  useEffect(() => {
+    if (state.success && !tracked.current) {
+      tracked.current = true;
+      posthog.capture("contact_form_submitted");
+    }
+  }, [state.success]);
 
   function validate(form: HTMLFormElement): boolean {
     const errs: Record<string, string> = {};
