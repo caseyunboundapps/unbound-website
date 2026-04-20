@@ -16,12 +16,13 @@ const martianMono = Martian_Mono({
 export const metadata: Metadata = {
   title: "Unbound Studios — Invention Company",
   description:
-    "Consumer apps, built in-house. Plus apps, AI, and automations for teams who want to ship faster.",
+    "App development studio building consumer products and partnering with founders to ship apps, AI, and automations. Based in Kansas.",
   metadataBase: new URL("https://unboundapps.com"),
+  alternates: { canonical: "https://unboundapps.com" },
   openGraph: {
     title: "Unbound Studios",
     description:
-      "Consumer apps, built in-house. Plus apps, AI, and automations for teams who want to ship faster.",
+      "App development studio building consumer products and partnering with founders to ship apps, AI, and automations. Based in Kansas.",
     siteName: "Unbound Studios",
     type: "website",
     images: ["/opengraph-image"],
@@ -52,12 +53,30 @@ export default function RootLayout({
               name: "Unbound Studios",
               url: "https://unboundapps.com",
               description:
-                "Consumer apps, built in-house. Plus apps, AI, and automations for teams who want to ship faster.",
+                "App development studio building consumer products and partnering with founders to ship apps, AI, and automations. Based in Kansas.",
               founders: [
                 { "@type": "Person", name: "Casey Ring" },
                 { "@type": "Person", name: "Nick Jackson" },
               ],
               email: "hello@unboundapps.com",
+              sameAs: [
+                "https://www.instagram.com/unboundbros/",
+                "https://www.tiktok.com/@unboundbros",
+                "https://x.com/unboundbros",
+                "https://www.youtube.com/@theunboundbros",
+              ],
+              address: {
+                "@type": "PostalAddress",
+                addressRegion: "KS",
+                addressCountry: "US",
+              },
+              knowsAbout: [
+                "app development",
+                "product strategy",
+                "AI automation",
+                "mobile apps",
+                "web applications",
+              ],
             }),
           }}
         />

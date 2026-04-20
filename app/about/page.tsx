@@ -11,9 +11,24 @@ export const metadata: Metadata = {
 };
 
 export default function AboutPage() {
+  const personSchemas = team.map((person) => ({
+    "@context": "https://schema.org",
+    "@type": "Person",
+    name: person.name,
+    jobTitle: person.role,
+    worksFor: {
+      "@type": "Organization",
+      name: "Unbound Studios",
+    },
+  }));
+
   return (
     <>
       <Header />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchemas) }}
+      />
       <main className="flex-1 pt-32 pb-24 px-14 max-md:px-5">
         <div className="max-w-3xl mx-auto">
           <p className="font-mono text-[0.65rem] text-text-tertiary tracking-[0.08em] uppercase mb-6">
