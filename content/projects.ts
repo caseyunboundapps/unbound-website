@@ -15,13 +15,13 @@ export const projects: Project[] = [
   {
     slug: "mirror",
     name: "Mirror",
-    tagline: "A daily reflection app for people who want to pay more attention to their own life.",
+    tagline: "A daily habit tracker that connects your actions to who you want to become.",
     description:
-      "Mirror helps you check in with yourself every day. Track actions, build routines, and reflect on patterns over time. No streaks, no guilt. Just an honest look at how you're spending your days.",
-    status: "in-development",
-    statusLabel: "In development",
+      "A daily habit tracker that connects your actions to who you want to become.",
+    status: "live",
+    statusLabel: "Public beta",
     tier: "featured",
-    url: "https://www.usemirror.app/",
+    url: "https://usemirror.app",
   },
   {
     slug: "golf-ai",
