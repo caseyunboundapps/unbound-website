@@ -28,7 +28,7 @@ export const projects: Project[] = [
     name: "Golf AI",
     tagline: "A physics-first thinking coach for golfers who want to drop strokes.",
     description:
-      "Chat-based swing coaching built on physics fundamentals. Get structured practice plans, understand why your ball does what it does, and build a repeatable swing through conversation — not YouTube rabbit holes.",
+      "Chat-based swing coaching built on physics fundamentals. Get structured practice plans, understand why your ball does what it does, and build a repeatable swing through conversation, not YouTube rabbit holes.",
     status: "live",
     statusLabel: "Live",
     tier: "secondary",

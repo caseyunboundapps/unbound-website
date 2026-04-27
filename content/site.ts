@@ -2,6 +2,7 @@ export const siteNav = {
   wordmark: "Unbound Studios",
   links: [
     { label: "Work", href: "/#work" },
+    { label: "Services", href: "/services" },
     { label: "About", href: "/about" },
   ],
   cta: { label: "Get in touch", href: "/contact" },
