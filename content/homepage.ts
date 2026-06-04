@@ -21,5 +21,5 @@ export const contactCta = {
   heading: "Let's build something.",
   body: "Try one of our apps, or tell us what you're working on.",
   primaryCta: { label: "Try Mirror", url: "https://www.usemirror.app/" },
-  secondaryCta: { label: "Start a conversation", url: "/contact" },
+  secondaryCta: { label: "Book a discovery call", url: "/contact" },
 };

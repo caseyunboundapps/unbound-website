@@ -1,4 +1,5 @@
 import ScrollReveal from "./ScrollReveal";
+import CalPopupButton from "./CalPopupButton";
 import { contactCta } from "@/content/homepage";
 
 export default function ContactCTA() {
@@ -30,12 +31,11 @@ export default function ContactCTA() {
             >
               {contactCta.primaryCta.label}
             </a>
-            <a
-              href={contactCta.secondaryCta.url}
+            <CalPopupButton
               className="inline-flex items-center gap-2 font-mono text-[0.7rem] font-medium px-6 py-3 rounded-pill text-cream shadow-[inset_0_0_0_1.5px_rgba(250,249,246,0.2)] hover:shadow-[inset_0_0_0_1.5px_rgba(250,249,246,0.6)] hover:-translate-y-0.5 transition-all duration-300"
             >
               {contactCta.secondaryCta.label}
-            </a>
+            </CalPopupButton>
           </div>
         </ScrollReveal>
       </div>

@@ -1,5 +1,6 @@
 import Link from "next/link";
 import ScrollReveal from "./ScrollReveal";
+import CalPopupButton from "./CalPopupButton";
 import { servicesHeading, services } from "@/content/services";
 
 export default function Services() {
@@ -15,6 +16,9 @@ export default function Services() {
             <p className="text-[1.05rem] text-text-secondary leading-[1.7] max-w-[340px]">
               {servicesHeading.body}
             </p>
+            <CalPopupButton className="font-mono text-[0.6rem] font-medium text-green hover:text-green-dim transition-colors duration-200 mt-4 inline-block">
+              Book a discovery call &rarr;
+            </CalPopupButton>
           </div>
         </ScrollReveal>
 
