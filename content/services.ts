@@ -1,54 +1,87 @@
 export const servicesPage = {
   label: "Work with us",
-  heading: "We bring the team. You bring what we can\u2019t learn from a screen.",
-  intro: "We build and distribute our own products: strategy, engineering, design, marketing, all of it. When we partner on a new venture, we\u2019re looking for one thing we can\u2019t provide ourselves: domain expertise and someone ready to own the business.",
-  partnership: {
-    heading: "How it works",
-    weBring: [
-      "Product strategy & design",
-      "Full-stack engineering",
-      "AI + automation",
-      "Branding, content, organic growth",
-      "Paid acquisition & distribution",
-      "Ops & infrastructure",
-    ],
-    youBring: [
-      "Deep knowledge in a field we can\u2019t Google our way into",
-      "Someone who wants to be a founder, not a client. You run the company.",
-      "A problem you can\u2019t stop thinking about",
-    ],
-  },
-  servicesSubheading: "For teams with budget who need execution.",
-  cta: { heading: "Tell us what you know.", href: "/contact" },
+  heading: "Two people. Both sides covered.",
+  intro: "Casey covers the technical side: AI systems, automations, apps, and data infrastructure. Nick covers strategy, positioning, messaging, and go-to-market. Whether you\u2019re running a company, launching something new, or figuring out your next career move \u2014 we take calls together because the best answers usually live at the intersection.",
+  cta: { heading: "30 minutes. Bring what you\u2019re working on.", href: "#cal" },
   metadata: {
-    title: "Work With Us \u2014 Unbound Studios",
+    title: "Services \u2014 Unbound Studios",
     description:
-      "We build and distribute products: strategy, engineering, design, marketing, all of it. We\u2019re looking for domain experts ready to own a business.",
+      "We build it, brand it, and ship it. AI, apps, strategy, and growth for companies and individuals. Book a discovery call.",
   },
 };
 
+export const servicesPageCategories = [
+  {
+    num: "01",
+    title: "AI, Automations & Systems",
+    desc: "Get your team using AI that actually works \u2014 not a demo, not a slide deck. We coach, build, and wire it into your real operations.",
+    offerings: [
+      "Claude Code & AI workflow coaching",
+      "Automation builds (n8n, agents, MCP)",
+      "Internal tools & dashboards",
+      "AI-ready data pipelines & schema cleanup",
+      "AI audit & strategy",
+    ],
+  },
+  {
+    num: "02",
+    title: "Apps & MVPs",
+    desc: "From idea to production. We build the thing, not a pitch about the thing.",
+    offerings: [
+      "Mobile apps (iOS & Android)",
+      "Web apps & websites",
+      "MVP & prototype builds",
+      "Full product development",
+    ],
+  },
+  {
+    num: "03",
+    title: "Strategy & Positioning",
+    desc: "Most companies are bad at explaining what they do. We fix that, then build the system to convert.",
+    offerings: [
+      "Market positioning & messaging",
+      "Offer design & monetization",
+      "Conversion copywriting (sales pages, launch emails)",
+      "Pitch & deck strategy",
+      "Go-to-market & launch strategy",
+    ],
+  },
+  {
+    num: "04",
+    title: "Growth & Distribution",
+    desc: "Build the audience, run the campaigns, and get the product in front of the right people.",
+    offerings: [
+      "Brand strategy & creative direction",
+      "Social media strategy & management",
+      "Organic & paid acquisition",
+      "Content strategy & coaching",
+      "Go-to-market & launch campaigns",
+    ],
+  },
+];
+
 export const servicesHeading = {
-  title: "We also help",
+  title: "Build it. Brand it.",
   titleBreak: true,
-  titleAccent: "ship.",
-  titlePrefix: "teams ",
-  body: "We work with a small number of teams at a time. If you're building a product and need someone who's been through the whole cycle, we should talk.",
+  titleAccent: "Ship it.",
+  titlePrefix: "",
+  body: "Whether you\u2019re running a company, launching something new, or figuring out your next move. We take a small number of clients at a time.",
 };
 
 export const services = [
   {
     num: "01",
-    title: "Product strategy",
-    desc: "What to build, what to skip, how to get to users fast.",
+    title: "AI, Automations & Systems",
+    desc: "Get your team using AI that actually works \u2014 coaching, automation builds, internal tools, and data pipelines.",
   },
   {
     num: "02",
-    title: "App development",
-    desc: "Native and web. From first commit to production.",
+    title: "Apps & MVPs",
+    desc: "Mobile apps, web apps, websites. From first commit to production.",
   },
   {
     num: "03",
-    title: "AI + Automations",
-    desc: "Models, agents, and workflows wired into your product or operations.",
+    title: "Strategy, Brand & Growth",
+    desc: "Positioning, brand strategy, conversion copy, and the distribution to get it seen.",
   },
 ];

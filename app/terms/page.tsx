@@ -28,17 +28,9 @@ export default function TermsPage() {
             <h2 className="font-sans text-xl font-bold text-ink pt-4">
               Product-Specific Terms
             </h2>
-            <ul className="list-disc pl-6 space-y-2">
-              <li>
-                <strong>Mirror Action Tracker:</strong>{" "}
-                <a
-                  href="https://usemirror.app/terms"
-                  className="text-green font-medium hover:text-green-dim transition-colors"
-                >
-                  usemirror.app/terms
-                </a>
-              </li>
-            </ul>
+            <p>
+              Product-specific terms will be published here as individual products launch. General website terms below apply to unboundapps.com.
+            </p>
 
             <h2 className="font-sans text-xl font-bold text-ink pt-4">
               General Website Terms

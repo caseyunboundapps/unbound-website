@@ -1,7 +1,7 @@
 export const siteNav = {
   wordmark: "Unbound Studios",
   links: [
-    { label: "Work", href: "/#work" },
+    { label: "Products", href: "/#products" },
     { label: "Services", href: "/services" },
     { label: "About", href: "/about" },
   ],
@@ -21,27 +21,27 @@ export const siteFooter = {
 
 export const aboutPage = {
   label: "About us",
-  heading: "Two people, building full-time.",
+  heading: "Living from the inside out.",
   paragraphs: [
-    "Unbound Studios is Casey Ring and Nick Jackson. We build consumer apps in-house and help a small number of outside teams ship their products.",
-    "We started this because we kept having ideas and wanted somewhere to actually build them. Not pitch decks. Not prototypes that sit in a folder. Real products, used by real people.",
-    "Casey handles product, engineering, and design. Nick handles strategy, operations, and making sure things actually get finished. Between the two of us, we cover the full cycle from idea to App Store.",
+    "Unbound Studios is Casey Ring and Nick Jackson. We build our own products and brands, and help others build, brand, and ship theirs \u2014 companies, founders, and individuals.",
+    "We started this because most people inherit a script \u2014 what to want, who to be, what success looks like. We wanted to write our own. Not pitch decks. Not prototypes in a folder. Real products, real businesses, built on our own terms.",
+    "Nick sets the direction \u2014 business priorities, product strategy, brand. Casey builds the systems \u2014 infrastructure, automation, code, and everything that makes the vision operational. We sync daily, move fast, and cover the full cycle from idea to shipped product.",
   ],
   metadata: {
-    title: "About — Unbound Studios",
+    title: "About \u2014 Unbound Studios",
     description:
-      "Two people building consumer apps and helping teams ship. Based in Kansas.",
+      "Two people who build, brand, and ship. Our own products, and yours. Based in Kansas.",
   },
 };
 
 export const contactPage = {
   label: "Contact",
-  heading: "Let's talk.",
-  body: "Have a project in mind, or just want to say hi? Drop us a note and we'll get back to you.",
+  heading: "Tell us what you\u2019re working on.",
+  body: "Book a discovery call or drop us a message. 30 minutes, no pitch deck, just straight answers about what would actually move the needle.",
   metadata: {
-    title: "Contact — Unbound Studios",
+    title: "Contact \u2014 Unbound Studios",
     description:
-      "Get in touch with Unbound Studios. Tell us what you're working on.",
+      "Book a discovery call or send us a message. AI, apps, automations, and strategy.",
   },
 };
 

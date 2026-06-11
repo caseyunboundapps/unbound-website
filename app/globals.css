@@ -53,7 +53,6 @@
 
 /* ─── Base Styles ─── */
 html {
-  scroll-behavior: smooth;
   -webkit-font-smoothing: antialiased;
 }
 

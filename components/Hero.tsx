@@ -12,7 +12,7 @@ export default function Hero() {
 
       <ScrollReveal delay={1}>
         <h1 className="font-sans text-[clamp(3.25rem,6.5vw,5.75rem)] font-extrabold leading-[1.02] tracking-[-0.045em] text-ink max-w-[900px] mb-10">
-          {hero.heading}{hero.headingBreak && <br />}people <span className="text-green italic">{hero.headingAccent}</span> {hero.headingEnd}
+          {hero.heading}{hero.headingBreak && <br />} <span className="text-green italic">{hero.headingAccent}</span>{hero.headingEnd && ` ${hero.headingEnd}`}
         </h1>
       </ScrollReveal>
 

@@ -22,18 +22,7 @@ export default function PrivacyPage() {
 
           <div className="text-text-secondary leading-[1.7] space-y-6">
             <p>
-              The privacy of our users is important to us. Our full Privacy Policy, covering all Unbound Studios products and services, is maintained at:
-            </p>
-            <p>
-              <a
-                href="https://usemirror.app/privacy"
-                className="text-green font-medium hover:text-green-dim transition-colors"
-              >
-                usemirror.app/privacy
-              </a>
-            </p>
-            <p>
-              This policy covers how we collect, use, disclose, and safeguard your information across all our products, including the Mirror Action Tracker app and this website.
+              The privacy of our users is important to us. This policy covers how we collect, use, disclose, and safeguard your information across all Unbound Studios products and services, including this website.
             </p>
             <p>
               For privacy-related inquiries, contact us at{" "}
