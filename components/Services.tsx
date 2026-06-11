@@ -1,4 +1,3 @@
-import Link from "next/link";
 import ScrollReveal from "./ScrollReveal";
 import CalPopupButton from "./CalPopupButton";
 import { servicesHeading, services } from "@/content/services";
@@ -37,12 +36,9 @@ export default function Services() {
                   <p className="text-[0.92rem] text-text-secondary leading-[1.6]">
                     {svc.desc}
                   </p>
-                  <Link
-                    href="/contact"
-                    className="font-mono text-[0.6rem] font-medium text-green hover:text-green-dim transition-colors duration-200 mt-3 inline-block"
-                  >
-                    Start a project &rarr;
-                  </Link>
+                  <CalPopupButton className="font-mono text-[0.6rem] font-medium text-green hover:text-green-dim transition-colors duration-200 mt-3 inline-block">
+                    Book a call &rarr;
+                  </CalPopupButton>
                 </div>
               </div>
             </ScrollReveal>

@@ -25,17 +25,17 @@ export default function ContactCTA() {
 
         <ScrollReveal delay={2}>
           <div className="flex gap-3 justify-center max-sm:flex-col max-sm:items-center">
-            <a
-              href={contactCta.primaryCta.url}
+            <CalPopupButton
               className="inline-flex items-center gap-2 font-mono text-[0.7rem] font-medium px-6 py-3 rounded-pill bg-green-dim text-white hover:bg-[#235f43] hover:-translate-y-0.5 hover:shadow-[0_6px_20px_rgba(45,122,86,0.2)] transition-all duration-300"
             >
               {contactCta.primaryCta.label}
-            </a>
-            <CalPopupButton
+            </CalPopupButton>
+            <a
+              href={contactCta.secondaryCta.url}
               className="inline-flex items-center gap-2 font-mono text-[0.7rem] font-medium px-6 py-3 rounded-pill text-cream shadow-[inset_0_0_0_1.5px_rgba(250,249,246,0.2)] hover:shadow-[inset_0_0_0_1.5px_rgba(250,249,246,0.6)] hover:-translate-y-0.5 transition-all duration-300"
             >
               {contactCta.secondaryCta.label}
-            </CalPopupButton>
+            </a>
           </div>
         </ScrollReveal>
       </div>

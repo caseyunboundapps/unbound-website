@@ -14,15 +14,15 @@ const martianMono = Martian_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Unbound Studios — Invention Company",
+  title: "Unbound Studios \u2014 Build it. Brand it. Ship it.",
   description:
-    "App development studio building consumer products and partnering with founders to ship apps, AI, and automations. Based in Kansas.",
+    "Two-person studio that builds, brands, and ships. Our own products, and yours. Apps, AI, strategy, and growth. Based in Kansas.",
   metadataBase: new URL("https://unboundapps.com"),
   alternates: { canonical: "https://unboundapps.com" },
   openGraph: {
     title: "Unbound Studios",
     description:
-      "App development studio building consumer products and partnering with founders to ship apps, AI, and automations. Based in Kansas.",
+      "Two-person studio that builds, brands, and ships. Our own products, and yours. Apps, AI, strategy, and growth. Based in Kansas.",
     siteName: "Unbound Studios",
     type: "website",
     images: ["/opengraph-image"],
@@ -41,6 +41,7 @@ export default function RootLayout({
     <html
       lang="en"
       className={`${figtree.variable} ${martianMono.variable} h-full antialiased`}
+      data-scroll-behavior="smooth"
     >
       <body className="min-h-full flex flex-col">
         <PostHogProviders>{children}</PostHogProviders>
@@ -53,7 +54,7 @@ export default function RootLayout({
               name: "Unbound Studios",
               url: "https://unboundapps.com",
               description:
-                "App development studio building consumer products and partnering with founders to ship apps, AI, and automations. Based in Kansas.",
+                "Two-person studio that builds, brands, and ships. Our own products, and yours. Apps, AI, strategy, and growth. Based in Kansas.",
               founders: [
                 { "@type": "Person", name: "Casey Ring" },
                 { "@type": "Person", name: "Nick Jackson" },
@@ -71,11 +72,12 @@ export default function RootLayout({
                 addressCountry: "US",
               },
               knowsAbout: [
-                "app development",
-                "product strategy",
-                "AI automation",
                 "mobile apps",
                 "web applications",
+                "AI systems",
+                "automations",
+                "product strategy",
+                "brand positioning",
               ],
             }),
           }}
